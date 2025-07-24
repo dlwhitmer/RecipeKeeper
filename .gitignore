@@ -1,0 +1,24 @@
+# Byte-compiled and cache files
+__pycache__/
+*.py[cod]
+
+# Installer artifacts
+installer/*.exe
+installer/*.msi
+installer/*.zip
+*.ifp  # InstallForge project file
+
+# VS Code settings (optional, if you're using it)
+.vscode/
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db
+
+# Log and temp files
+*.log
+*.tmp
+
+# Environment configs
+.env
+*.sqlite3  # if you want to exclude database files
