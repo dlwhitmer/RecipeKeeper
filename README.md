@@ -8,7 +8,6 @@ A modern desktop app for storing and browsing recipes, built in Python with PyQt
 
 - Add and view custom recipes with ingredients and steps
 - Browse and search by keywords
-- Sleek brushed-metal inspired UI
 - SQLite3-powered local storage — no cloud required
 - First-launch flow with persistent user settings
 - Modular design for future expansion
