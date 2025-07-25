@@ -4,6 +4,7 @@ from PyQt6.QtCore import *
 from PyQt6.QtPrintSupport import *
 from converter import SecondWindow
 import sqlite3
+from widgets.recipe_item_widget import RecipeItemWidget
 
 # utils.py
 import os
