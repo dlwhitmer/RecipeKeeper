@@ -1,45 +1,38 @@
-# -*- mode: python ; coding: utf-8 -*-
-
+# -*- mode: python; coding: utf-8 -*-
+block_cipher = None
 
 a = Analysis(
-    ['Recipe_Keeper.py'],
-    pathex=[],
+    ['recipe_keeper.py'],
+    pathex=['.'],                # look in this folder for all inputs
     binaries=[],
-    datas=[('Recipe_keeper.db', '.')],
+    datas=[ ('Recipe_keeper.db', '.'), ('book.ico', '.') ],
     hiddenimports=[],
     hookspath=[],
-    hooksconfig={},
     runtime_hooks=[],
     excludes=[],
-    noarchive=False,
-    optimize=0,
+    cipher=block_cipher,
 )
+
 pyz = PYZ(a.pure)
 
 exe = EXE(
     pyz,
     a.scripts,
-    [],
-    exclude_binaries=True,
-    name='Recipe_Keeper',
+    exclude_binaries=True,      # let COLLECT gather binaries+datas
+    name='recipe_keeper',
     debug=False,
-    bootloader_ignore_signals=False,
     strip=False,
     upx=True,
     console=False,
-    disable_windowed_traceback=False,
-    argv_emulation=False,
-    target_arch=None,
-    codesign_identity=None,
-    entitlements_file=None,
-    icon=['logo.ico'],
+    icon='book.ico',             # embed this single ICO file
 )
+
 coll = COLLECT(
     exe,
     a.binaries,
+    a.zipfiles,
     a.datas,
     strip=False,
     upx=True,
-    upx_exclude=[],
-    name='Recipe_Keeper',
+    name='Recipe Keeper',
 )
